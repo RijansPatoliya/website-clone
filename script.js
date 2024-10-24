@@ -1,3 +1,15 @@
+function cursor(){
+    var main=document.querySelector("#main")
+var crsr=document.querySelector("#cursor")
+
+main.addEventListener("mousemove",function(dets){
+    crsr.style.left = dets.x + "px"
+    crsr.style.top = dets.y + "px"
+})
+}
+cursor()
+
+
 function navEnimation(){
   var nav = document.querySelector("nav")
 
@@ -105,23 +117,8 @@ video.addEventListener("mouseleave",function(){
 }
 page3VideoAnimation()
 
-var page4=document.querySelector("#side-right")
-var page4_video1=document.querySelector("#side-right video")
 
-page4.addEventListener("mouseenter",function(){
-    page4_video1.play();
-    gsap.to(page4_video1,{
-        opacity:1,
-        duration:0.1
-    })
-})
-page4.addEventListener("mouseleave",function(){
-    page4_video1.load();
-    gsap.to(page4_video1,{
-        opacity:0,
-        duration:0.1
-    })
-})
+
 
 
 
